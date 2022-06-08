@@ -21,20 +21,20 @@ export const Header = () => {
 
     const getHeaderOptions = () => {
         return (
-            TOTAL_SCREENS.map((screen, i) => {
+            TOTAL_SCREENS.map((screen, i) => (
                 <div key={screen.screen_name} className={getHeaderOptionsClass(i)}
                     onClick={() => switchScreen(i, screen)}>
                     <span>{screen.screen_name}</span>
                 </div>
 
-            })
+            ))
         )
     }
 
     const getHeaderOptionsClass = (index) => {
         let classes = "header-options";
         if (index < TOTAL_SCREENS.length - 1)
-            classes += "header-option-separator"
+            classes += "header-option-separator";
 
         if (selectedScreen === index)
             classes += "selected-header-option";
@@ -48,21 +48,21 @@ export const Header = () => {
             return;
 
         screenComponent.scrollIntoView({ behavior: 'smooth' })
-        setSelectedScreen(index)
-        setShowHeaderOptions(false)
+        setSelectedScreen(index);
+        setShowHeaderOptions(false);
     }
 
     return (
         <div>
-            <div className='header-option' onClick={() => setShowHeaderOptions(!showHeaderOptions)}>
+            <div className='header-container' onClick={() => setShowHeaderOptions(!showHeaderOptions)}>
                 <div className='header-parent'>
                     <div className='header-hamburger' onClick={() => setShowHeaderOptions(!showHeaderOptions)}>
-                        <FontAwesomeIcon className='header-hamburger-bars' icon={faBars}/>
+                        <FontAwesomeIcon className='header-hamburger-bars' icon={faBars} />
                     </div>
                     <div className='header-logo'>
                         <span>BESTCODE</span>
                     </div>
-                    <div className={(showHeaderOptions)? "header-options show-hamburger-options": "heaer-options"}>
+                    <div className={(showHeaderOptions) ? "header-options show-hamburger-options" : "heaer-options"}>
                         {getHeaderOptions()}
                     </div>
                 </div>
