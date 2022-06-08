@@ -30,7 +30,7 @@ export default function Profile() {
                     <div className='profile-details-name'>
                         <span className='primary-text'>
                             {" "}
-                            Hola, soy <span className='highlighted-tex'>Jacob</span>
+                            Hello, I'm <span className='highlighted-tex'>Jacob</span>
                         </span>
                     </div>
                     <div className='profile-details-role'>
@@ -56,7 +56,7 @@ export default function Profile() {
 
                             </h1>
                             <span className='profile-role-tagline'>
-                                Knack of building applications winth front and backk end operations.
+                            Website under development
                             </span>
                         </span>
                     </div>
@@ -66,7 +66,7 @@ export default function Profile() {
                             Hire Me{""}
                         </button>
                         <a href='CV Jacob.pdf' download='CV Jacob Aguilar.pdf'>
-                            <button className="btn highlighted-btn">Obtener Resumen</button>
+                            <button className="btn highlighted-btn">Get Summary</button>
                         </a>
                     </div>
                 </div>
